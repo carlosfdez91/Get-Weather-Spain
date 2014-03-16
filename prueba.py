@@ -59,22 +59,24 @@ vision = raiz2.find('channel/%satmosphere' % yweatherns).attrib["visibility"]
 presion = raiz2.find('channel/%satmosphere' % yweatherns).attrib["pressure"]
 sol = raiz2.find('channel/%sastronomy' % yweatherns).attrib["sunrise"]
 puesta = raiz2.find('channel/%sastronomy' % yweatherns).attrib["sunset"]
-cielo = raiz2.find('channel/item/%scondition' % yweatherns).attrib["text"]
-reemplazar = cielo.replace("Partly Cloudy"
-	,"Parcialmente nublado").replace("Cloudy","Nublado").replace("Sunny",
-	"Soleado").replace("Fair","Noche").replace("Mostly Cloudy",
-	"Mayormente Nublado").replace("Showers","Lluvia").replace("Mostly Clear",
-	"Mayormente despejado")
-
+cielo = raiz2.find('channel/item/%scondition' % yweatherns).attrib["code"]
+reemplazar = cielo.replace("44"
+	,"Nublado").replace("26","Nublado").replace("32",
+	"Soleado").replace("33","Noche").replace("27",
+	"Mayormente Nublado").replace("11","Lluvia").replace("31",
+	"Despejado").replace("34","Día").replace("28",
+	"Mayormente Nublado").replace("29",
+	"Parcialmente Nublado").replace("30",
+	"Parcialmente Nublado")
 direcc = orientacion(direccion)
 
 os.system ('clear')
 print "-Lugar de la consulta: %s " % tiempode
-print "-Fecha y hora de la consulta: %s" % fechayhora
+print "-Fecha y hora de la actualización de datos: %s" % fechayhora
 print "-Temperatura actual: %s %s, Cielo: %s" % (tempactual,grados,reemplazar)
-print "-Viento: Sensacion termica %s %s, Direccion %s, Velocidad %s %s" % (
+print "-Viento: Sensación térmica %s %s, Dirección %s, Velocidad %s %s" % (
 	sensacion,grados,direcc,velocidad,speed)
-print "-Atmosfera: Humedad %s por ciento, Visibilidad %s %s, Presion %s %s" % (
+print "-Atmosfera: Humedad %s por ciento, Visibilidad %s %s, Presión %s %s" % (
 	humedad,vision,km,presion,press)
-print "-Astronomia: Amanecer: %s, Ocaso: %s" % (sol,puesta)
+print "-Astronomía: Amanecer: %s, Ocaso: %s" % (sol,puesta)
 
