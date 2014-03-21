@@ -27,7 +27,8 @@ def orientacion(direccion):
 
 localidad = raw_input('¿De que ciudad quieres el tiempo? ')
 
-espacio = localidad.replace(" ","-")
+espacio = localidad.replace(" ","-").replace("sevilla","seville").replace(
+	"Sevilla","Seville")
 
 url = requests.get('http://xoap.weather.com/weather/search/search?'
 	,params = {'where':'%s' % espacio})
