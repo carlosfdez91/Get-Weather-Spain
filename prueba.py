@@ -5,24 +5,27 @@ from lxml import etree
 
 yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
 
+lista_direccion = []
+
 def orientacion(direccion):
 	"""Función que calcula la dirección de la que procede el viento"""
-	if direccion >= 337 and direccion < 22.5:
-		return 'N'
-	elif direccion >= 22.5 and direccion < 67.5:
-		return 'NE'
-	elif direccion >= 67.5 and direccion < 112.5:
-		return 'E'
-	elif direccion >= 112.5 and direccion < 157.5:
-		return 'SE'
-	elif direccion >= 157.5 and direccion < 202.5:
-		return 'S'
-	elif direccion >= 202.5 and direccion < 247.5:
-		return 'SO'
-	elif direccion >= 247.5 and direccion < 292.5:
-		return 'O'
-	elif direccion >= 292.5 and direccion < 337.5:
-		return 'NO'
+	if direccion == 0 or direccion == 360:
+		return 'Norte'
+	elif direccion > 0 and direccion < 90:
+		return 'Noreste'
+	if direccion == 90:
+		return 'Este'
+	elif direccion > 90 and direccion < 180:
+		return 'Sureste'
+	if direccion == 180:
+		return 'Sur'
+	elif direccion > 180 and direccion < 270: 
+		return 'Suroeste'
+	if direccion == 270:
+		return 'Oeste'
+	elif direccion > 270 and direccion < 360:
+		return 'Noroeste'
+	
 
 localidad = raw_input('¿De que ciudad quieres el tiempo? ')
 
@@ -49,6 +52,7 @@ condiciones = raiz2.find('channel/item/title').text
 tempactual = raiz2.find('channel/item/%scondition' % yweatherns).attrib["temp"]
 grados = raiz2.find('channel/%sunits' % yweatherns).attrib["temperature"]
 sensacion = raiz2.find('channel/%swind' % yweatherns).attrib["chill"]
+#direccion = str(20)
 direccion = raiz2.find('channel/%swind' % yweatherns).attrib["direction"]
 velocidad = raiz2.find('channel/%swind' % yweatherns).attrib["speed"]
 km = raiz2.find('channel/%sunits' % yweatherns).attrib["distance"]
@@ -69,16 +73,17 @@ reemplazar = cielo.replace("44"
 	,"Parcialmente Nublado").replace("30","Parcialmente Nublado")
 
 direcc = orientacion(direccion)
-
+lista_direccion.append(direcc)
 
 os.system ('clear')
 print "-Lugar de la consulta: %s " % tiempode
 print "-Fecha y hora de la actualización de datos: %s" % fechayhora
-print "-Temperatura actual: %s %s, Condición actual: %s" % (tempactual,grados,reemplazar)
+print "-Temperatura actual: %s %s, Condición actual: %s" % (tempactual
+	,grados,reemplazar)
 print "-Viento: Sensación térmica %s %s, Dirección %s, Velocidad %s %s" % (
-	sensacion,grados,direcc,velocidad,speed)
+	sensacion,grados,lista_direccion,velocidad,speed)
 print "-Atmosfera: Humedad %s por ciento, Visibilidad %s %s, Presión %s %s" % (
 	humedad,vision,km,presion,press)
 print "-Astronomía: Amanecer: %s, Ocaso: %s" % (sol,puesta)
-print direcc
+print direccion
 
