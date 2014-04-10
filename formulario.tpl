@@ -9,11 +9,11 @@
 		<a name="Inicio"></a>
 		<h1>Get Weather!</h1>
 		<form action="/peticion" method="POST">  
-	    <br/><p>Introduce el nombre de la localidad de la cual quieres obtener su informacion metereologica</p>
+	    <br/><p>Introduce el nombre de la localidad de la cual quieres obtener su informacion metereológica.</p>
 	    <input type="str" name="nombre" value=""/>
 	    <br/>
 	     <br>
-	      <input type='submit' value='Submit'/>
+	      <input type='submit' value='Buscar'/>
 	    </form>
 	</body>
 </html>
