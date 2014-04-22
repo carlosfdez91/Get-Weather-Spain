@@ -1,12 +1,9 @@
-import bottle
-import get
-import post
-import run
-import template
-import request
+from bottle import route, get, post, run, template, request, 
 
 @get('/')
-def obtener():
+def codigo_ciudad():
+	url = requests.get('http://xoap.weather.com/weather/search/search?'
+	,params = {'where':'%s' % espacio})
 	return template('formulario.tpl')
 
 @post('/peticion')
