@@ -1,13 +1,14 @@
 from bottle import route, get, post, run, template, request
+from busqueda import busqueda
 
 @route('/')
 def index():
-    return template('formulario.tpl')
+    return template('busqueda.tpl')
 
-
-#ciudad = raw_input('search')
-#url = requests.get('http://xoap.weather.com/weather/search/search?',params = {'where':'%s' % ciudad})
-#print url
+@post('/resultado')
+def resultado():	
+	except KeyError:
+		return template('resultado.tpl')
 
 import os
 from bottle import TEMPLATE_PATH
