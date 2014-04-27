@@ -8,12 +8,10 @@
 		<div id="centrar">
 		<a name="Inicio"></a>
 		<h1>Get Weather!</h1>
-		<form action="/peticion" method="POST">  
+		<form id="search_form" action="/resultado" method="post">  
 	    <br/><p>Introduce el nombre de la localidad de la cual quieres obtener su informacion metereológica.</p>
-	    <input type="str" name="nombre" value=""/>
-	    <br/>
-	     <br>
-	      <input type='submit' value='Buscar'/>
+	    	<input class="search_field" type="text" name="entrada" value="" id="search"/>
+	    	<input class="search_button" type="submit" value="obtener" id="submit"/>
 	    </form>
 	</body>
 </html>
