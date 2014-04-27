@@ -2,15 +2,11 @@ from bottle import route, get, post, run, template, request
 
 @get('/peticion')
 def codigo_ciudad():
-	ciudad = raw_input('search')
-	url = requests.get('http://xoap.weather.com/weather/search/search?',params = {'where':'%s' % ciudad})
-	print url
 	return template('formulario.tpl')
 
-#@post('/peticion')
-#def mostrar():
-#		texto = request.forms.get('search')
-#		return '<p>%s</p>' % texto
+#ciudad = raw_input('search')
+#url = requests.get('http://xoap.weather.com/weather/search/search?',params = {'where':'%s' % ciudad})
+#print url
 
 import os
 from bottle import TEMPLATE_PATH
