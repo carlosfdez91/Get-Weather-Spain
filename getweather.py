@@ -1,13 +1,15 @@
 from bottle import route, get, post, run, template, request
-from busqueda import busqueda
 
 @route('/')
 def index():
+    return template('inicio.tpl')
+
+@get('/busqueda')
+def entrada():
     return template('busqueda.tpl')
 
 @post('/resultado')
 def resultado():	
-	except KeyError:
 		return template('resultado.tpl')
 
 import os
