@@ -11,7 +11,7 @@
 		<form id="search_form" action="/resultado" method="post">  
 	    <br/><p>Introduce el nombre de la localidad de la cual quieres obtener su informacion metereológica.</p>
 	    	<input class="search_field" type="text" name="entrada" value="" id="search"/>
-	    	<input class="search_button" type="submit" value="obtener" id="submit"/>
+	    	<input class="search_button" type="submit" value="Obtener" id="submit"/>
 	    </form>
 	</body>
 </html>
