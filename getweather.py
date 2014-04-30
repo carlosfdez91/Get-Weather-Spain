@@ -1,4 +1,5 @@
 from bottle import route, get, post, run, template, request
+from busqueda import busqueda1
 
 @route('/')
 def index():
@@ -9,8 +10,8 @@ def entrada():
     return template('busqueda.tpl')
 
 @post('/resultado')
-def resultado():	
-		return template('resultado.tpl')
+def resultado():
+		return busqueda1()
 
 import os
 from bottle import TEMPLATE_PATH
