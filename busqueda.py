@@ -4,8 +4,8 @@ def busqueda(entrada):
 	from lxml import etree
 	from bottle import request
 
-	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
 	entrada = request.forms.get('entrada')
+	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
 	localidad = entrada
 
 	espacio = localidad.replace(" ","-").replace("sevilla","seville").replace(
@@ -47,3 +47,5 @@ def busqueda(entrada):
 		"Lluvia").replace("12","Chubascos").replace("31",
 		"Despejado").replace("34","Día").replace("28","Mayormente Nublado"
 		).replace("29","Parcialmente Nublado").replace("30","Parcialmente Nublado")
+
+	return template('resultado.tpl',tiempode=tiempode,fechayhora=fechayhora,tempactual=tempactual,grados=grados,reemplazar=reemplazar,sensacion=sensacion,grados=grados,direccion=direccion,velocidad=velocidad,speed=speed,humedad=humedad,vision=vision,km=km,presion=presion,press=press,sol=sol,puesta=puesta)
