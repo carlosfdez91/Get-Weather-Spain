@@ -1,8 +1,8 @@
-def busqueda(entrada):
+def busqueda1():
 	import os
 	import requests
 	from lxml import etree
-	from bottle import request
+	from bottle import request, template
 
 	entrada = request.forms.get('entrada')
 	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
@@ -45,7 +45,9 @@ def busqueda(entrada):
 		"Nublado").replace("32","Soleado").replace("33",
 		"Noche").replace("27","Mayormente Nublado").replace("11",
 		"Lluvia").replace("12","Chubascos").replace("31",
-		"Despejado").replace("34","Día").replace("28","Mayormente Nublado"
+		"Despejado").replace("34","Dia").replace("28","Mayormente Nublado"
 		).replace("29","Parcialmente Nublado").replace("30","Parcialmente Nublado")
 
-	return template('resultado.tpl',tiempode=tiempode,fechayhora=fechayhora,tempactual=tempactual,grados=grados,reemplazar=reemplazar,sensacion=sensacion,grados=grados,direccion=direccion,velocidad=velocidad,speed=speed,humedad=humedad,vision=vision,km=km,presion=presion,press=press,sol=sol,puesta=puesta)
+	return template('resultado.tpl',tiempode=tiempode,fechayhora=fechayhora,tempactual=tempactual,grados=grados,
+		reemplazar=reemplazar,sensacion=sensacion,grados=grados,direccion=direccion,velocidad=velocidad,
+		speed=speed,humedad=humedad,vision=vision,km=km,presion=presion,press=press,sol=sol,puesta=puesta)
