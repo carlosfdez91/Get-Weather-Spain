@@ -48,6 +48,6 @@ def busqueda1():
 		"Despejado").replace("34","Dia").replace("28","Mayormente Nublado"
 		).replace("29","Parcialmente Nublado").replace("30","Parcialmente Nublado")
 
-	return template('resultado.tpl',tiempode=tiempode,fechayhora=fechayhora,tempactual=tempactual,grados=grados,
-		reemplazar=reemplazar,sensacion=sensacion,grados=grados,direccion=direccion,velocidad=velocidad,
+	return template('resultado.tpl',tiempode=tiempode,fechayhora=fechayhora,tempactual=tempactual,grados=grados1,
+		reemplazar=reemplazar,sensacion=sensacion,direccion=direccion,velocidad=velocidad,
 		speed=speed,humedad=humedad,vision=vision,km=km,presion=presion,press=press,sol=sol,puesta=puesta)
