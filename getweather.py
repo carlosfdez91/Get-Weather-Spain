@@ -9,9 +9,9 @@ def index():
 def entrada():
     return template('busqueda.tpl')
 
-@post('/resultado')
+@post('/busqueda1')
 def resultado():
-		return busqueda1()
+	return busqueda1('resultado.tpl')
 
 import os
 from bottle import TEMPLATE_PATH
