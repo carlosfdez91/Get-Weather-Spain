@@ -9,7 +9,7 @@
 		<a name="Inicio"></a>
 		<h1>Get Weather!</h1>
 		<div id="menu">
-		<a class="menu" href="busqueda">Busqueda</a>
+		<a class="menu" href="busqueda">Búsqueda</a>
 	</div>
 </body>
 </html>
