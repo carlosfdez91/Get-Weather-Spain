@@ -9,7 +9,7 @@ def index():
 def entrada():
     return template('busqueda.tpl')
 
-@post('/busqueda1')
+@post('/resultado')
 def resultado():
 	return busqueda1('resultado.tpl')
 
