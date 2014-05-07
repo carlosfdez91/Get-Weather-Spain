@@ -10,8 +10,8 @@ def entrada():
     return template('busqueda.tpl')
 
 @post('/resultado')
-def resultado():
-	return busqueda1('resultado.tpl')
+def busqueda1(resultado):
+	return template('resultado.tpl')
 
 import os
 from bottle import TEMPLATE_PATH
