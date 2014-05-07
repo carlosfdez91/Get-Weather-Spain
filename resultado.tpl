@@ -6,6 +6,7 @@
 	</head>
 		<body>
 			<h1>Prevision Metereologica</h1>
+			<h2><a href="/resultado"></a></h2>
 				<ul>
 					<li>Lugar de la consulta: {{ tiempode }} </li>
 					<li>Fecha y hora de la actualización de datos: {{ fechayhora }}</li>
