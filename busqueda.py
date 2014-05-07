@@ -1,12 +1,9 @@
-def busqueda1():
+def busqueda1(localidad):
 	import os
 	import requests
 	from lxml import etree
-	from bottle import request, template
 
-	entrada = request.forms.get('entrada')
 	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
-	localidad = entrada
 
 	espacio = localidad.replace(" ","-").replace("sevilla","seville").replace(
 		"Sevilla","Seville")
