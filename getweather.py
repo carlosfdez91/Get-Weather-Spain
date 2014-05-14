@@ -7,11 +7,11 @@ def index():
 
 @get('/busqueda')
 def entrada():
-	localidad = request.forms.get('localidad')
-    return template('busqueda.tpl')
+	return template('busqueda.tpl')
 
 @post('/resultado')
 def busqueda1():
+	localidad = request.forms.get('localidad')
 	return template('resultado.tpl')
 
 import os
