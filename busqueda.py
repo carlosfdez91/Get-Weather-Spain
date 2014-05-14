@@ -2,6 +2,7 @@ def busqueda1(localidad):
 	import os
 	import requests
 	from lxml import etree
+	from jinja2 import Template
 
 	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
 
@@ -39,12 +40,12 @@ def busqueda1(localidad):
 	puesta = raiz2.find('channel/%sastronomy' % yweatherns).attrib["sunset"]
 	cielo = raiz2.find('channel/item/%scondition' % yweatherns).attrib["code"]
 	reemplazar = cielo.replace("44","Nublado").replace("26",
-		"Nublado").replace("32","Soleado").replace("33",
-		"Noche").replace("27","Mayormente Nublado").replace("11",
-		"Lluvia").replace("12","Chubascos").replace("31",
-		"Despejado").replace("34","Dia").replace("28","Mayormente Nublado"
-		).replace("29","Parcialmente Nublado").replace("30","Parcialmente Nublado")
+	"Nublado").replace("32","Soleado").replace("33",
+	"Noche").replace("27","Mayormente Nublado").replace("11",
+	"Lluvia").replace("12","Chubascos").replace("31",
+	"Despejado").replace("34","Dia").replace("28","Mayormente Nublado"
+	).replace("29","Parcialmente Nublado").replace("30","Parcialmente Nublado")
 
-	return template('resultado.tpl',tiempode=tiempode,fechayhora=fechayhora,tempactual=tempactual,grados=grados1,
-		reemplazar=reemplazar,sensacion=sensacion,direccion=direccion,velocidad=velocidad,
-		speed=speed,humedad=humedad,vision=vision,km=km,presion=presion,press=press,sol=sol,puesta=puesta)
+	return template('resultado.tpl',{'tiempode':tiempode,'fechayhora':fechayhora,'tempactual':tempactual,'grados':grados,
+		'reemplazar':reemplazar,'sensacion':sensacion,'direccion':direccion,'velocidad':velocidad,
+		'speed':speed,'humedad':humedad,'vision':vision,'km':km,'presion':presion,'press':press,'sol':sol,'puesta':puesta})
