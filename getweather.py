@@ -1,5 +1,5 @@
 from bottle import route, get, post, run, template, request
-from busqueda import busqueda1
+from busqueda import buscar
 
 @route('/')
 def index():
@@ -10,9 +10,10 @@ def entrada():
 	return template('busqueda.tpl')
 
 @post('/resultado')
-def busqueda1():
+def busqueda():
 	localidad = request.forms.get('localidad')
-	return template('resultado.tpl')
+	prevision = buscar(localidad)
+	return template('resultado.tpl',datos=prevision)
 
 import os
 from bottle import TEMPLATE_PATH
