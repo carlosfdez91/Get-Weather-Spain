@@ -5,11 +5,13 @@ def buscar(localidad):
 
 	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
 
+	codigo = localidad
+
 	# espacio = localidad.replace(" ","-").replace("sevilla","seville").replace(
 	# 	"Sevilla","Seville")
 
 	url = requests.get('http://xoap.weather.com/weather/search/search?'
-		,params = {'where':'%s' % localidad})
+		,params = {'where':'%s' % codigo})
 
 	raiz = etree.fromstring(url.text.encode("utf-8"))
 	loc = raiz.find("loc")
@@ -22,7 +24,7 @@ def buscar(localidad):
 	raiz2 = etree.fromstring(tiempo.text.encode("utf-8"))
 	tiempode = raiz2.find('channel/description').text
 	#fechayhora = raiz2.find('channel/lastBuildDate').text
-	# city = raiz2.find('channel/%slocation' % yweatherns).attrib["city"]
+	#city = raiz2.find('channel/%slocation' % yweatherns).attrib["city"]
 	# condiciones = raiz2.find('channel/item/title').text
 	# tempactual = raiz2.find('channel/item/%scondition' % yweatherns).attrib["temp"]
 	# grados = raiz2.find('channel/%sunits' % yweatherns).attrib["temperature"]
@@ -91,7 +93,8 @@ def buscar(localidad):
 
 	
 	prevision = {
-	'tiempode':tiempode}
+	'tiempode':tiempode,
+	'codigo':codigo}
 	# 'fechayhora':fechayhora,
 	# 'tempactual':tempactual,
 	# 'grados':grados,
