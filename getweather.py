@@ -11,8 +11,8 @@ def entrada():
 
 @post('/resultado')
 def busqueda():
-	localidad = request.forms.get('localidad')
-	prevision = buscar(localidad)
+	text = request.forms.get('text')
+	prevision = buscar(text)
 	return template('resultado.html',datos=prevision)
 
 import os
