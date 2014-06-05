@@ -1,11 +1,11 @@
 from bottle import route, get, post, run, template, request
 from busqueda import buscar
 
-@route('/')
-def index():
-    return template('inicio.tpl')
+# @route('/')
+# def index():
+#     return template('inicio.tpl')
 
-@get('/busqueda')
+@route('/')
 def entrada():
 	return template('busqueda.html')
 
