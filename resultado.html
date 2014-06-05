@@ -1,11 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1 -strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 	<head>
-		<meta charset="utf-8">	<head>
+		<meta charset="utf-8">
 		<title>Get Weather!</title >
 	</head>
 		<body>
-			<h1>Prevision Metereologica</h1>
-			<h2>{{ datos }}</h2>
+			<h1>Previsión Metereológica de {{ datos['tiempode'] }}</h1>
+				{% for elemento in datos %}
+			<h2>-Valores detallados:</h2>
+			<ul>
+				<li>Fecha y hora de la actualización de datos: {{ datos['fechayhora'] }}</li>
+				<li>Temperatura actual: {{ datos['tempactual'] }} º {{ datos['grados'] }}, Condición actual: {{ datos['reemplazar'] }}</li>
+				<li>Viento: Sensación térmica {{ datos['sensacion'] }} º {{ datos['grados'] }}, Dirección {{ datos['direccion'] }}, Velocidad {{ datos['velocidad'] }} {{ datos['speed'] }}</li>
+				<li>Atmósfera: Humedad {{ datos['humedad'] }} por ciento, Visibilidad {{ datos['vision'] }}, {{ datos['km'] }}, Presión {{ datos['presion'] }} {{ datos['press'] }}</li>
+				<li>Astronomía: {{ datos['sol'] }}, Amanecer: Ocaso: {{ datos['puesta'] }}</li>
+			</ul>
+				{% endfor %}
+			<a href="/">Volver a la página de busqueda.</a>
   		</body>
 </html>
