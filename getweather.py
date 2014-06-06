@@ -1,4 +1,4 @@
-from bottle import route, get, post, run, template, request
+from bottle import route, get, post, run, template, request, static_file
 from busqueda import buscar
 
 # @route('/')
@@ -7,13 +7,17 @@ from busqueda import buscar
 
 @route('/')
 def entrada():
-	return template('busqueda.html')
+	return template("busqueda.html")
+
+@route('/static/images/<filename>')
+def server_static(filename):
+  	return static_file(filename, root='./static/images/')
 
 @post('/resultado')
 def busqueda():
 	text = request.forms.get('text')
 	prevision = buscar(text)
-	return template('resultado.html',datos=prevision)
+	return template("resultado.html",datos=prevision)
 
 import os
 from bottle import TEMPLATE_PATH
