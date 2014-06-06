@@ -11,12 +11,12 @@
 			<ul>
 				<li>Fecha y hora de la actualización de datos: {{ datos['fechayhora'] }}</li>
 				<li>Temperatura actual: {{ datos['tempactual'] }} º {{ datos['grados'] }}, Condición actual: {{ datos['reemplazar'] }}</li>
-				<img src="/images/{{ datos['cielo'] }}.png" width=93 height=93>
+				<img src="static/images/{{ datos['cielo'] }}.png" width=93 height=93>
 				<li>Viento: Sensación térmica {{ datos['sensacion'] }} º {{ datos['grados'] }}, Dirección {{ datos['direccion'] }}, Velocidad {{ datos['velocidad'] }} {{ datos['speed'] }}</li>
 				<li>Atmósfera: Humedad {{ datos['humedad'] }} por ciento, Visibilidad {{ datos['vision'] }}, {{ datos['km'] }}, Presión {{ datos['presion'] }} {{ datos['press'] }}</li>
 				<li>Astronomía: {{ datos['sol'] }}, Amanecer: Ocaso: {{ datos['puesta'] }}</li>
 			</ul>
 				{% endfor %}
-			<a href="/">Volver a la página de busqueda.</a>
+			<a href="/"><img src="static/images/back.png" alt="Volver a la página de busqueda"></a>
   		</body>
 </html>
