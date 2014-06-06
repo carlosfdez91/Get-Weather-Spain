@@ -1,4 +1,4 @@
-from bottle import route, get, post, run, template, request, static_file
+from bottle import route, get, post, run, template, request, static_file, default_app
 from busqueda import buscar
 
 # @route('/')
@@ -28,8 +28,7 @@ if os.environ.has_key('OPENSHIFT_REPO_DIR'):
 
 if ON_OPENSHIFT:
     TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_HOMEDIR'], 
-                                      'runtime/repo/wsgi/views/'))
+                                      'app-root/repo/wsgi/views/'))
     application=default_app()
 else:
 	run(host='localhost', port=8080)
-	
