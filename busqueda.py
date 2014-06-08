@@ -6,19 +6,26 @@ def buscar(text):
 
 	yweatherns = "{http://xml.weather.yahoo.com/ns/rss/1.0}"
 
-	#codigo = ('utrera')
+	nombre = text.lower()
+	nombresin = nombre.replace("á","a").replace("é","e").replace("í","i").replace("ó","o").replace("ú","u").replace("ñ","n");
 
-	espacio = text.replace(" "
-		,"-").replace("sevilla"
-		,"seville").replace("Sevilla"
-		,"Seville").replace("ñ","n")
+	codigos = open('codigos.txt','r')
+	
+	encontrado = False
+	
+	for linea in codigos:
+		if nombresin == linea.split(",")[0]:
+			ciudad = linea.split(",")[1]
+			encontrado = True
+			break
 
-	url = requests.get('http://xoap.weather.com/weather/search/search?'
-		,params = {'where':'%s' % espacio})
-
-	raiz = etree.fromstring(url.text.encode("utf-8"))
-	loc = raiz.find("loc")
-	ciudad = loc.attrib["id"]
+	if encontrado <> True:
+		espacio = nombresin.replace(" ","-")
+		url = requests.get('http://xoap.weather.com/weather/search/search?'
+			,params = {'where':'%s' % espacio})
+		raiz = etree.fromstring(url.text.encode("utf-8"))
+		loc = raiz.find("loc")
+		ciudad = loc.attrib["id"]
 
 	valores = {'p': '%s' % ciudad,'u':'c'}
 	tiempo = requests.get('http://weather.yahooapis.com/forecastrss?'
@@ -82,7 +89,7 @@ def buscar(text):
 		,"Tormentas electricas").replace("46"
 		,"Nieve").replace("47"
 		,"Tormentas electricas aisladas").replace("3200"
-		,"No disponible")
+		,"No disponible");
 
 	
 	prevision = {
@@ -106,6 +113,7 @@ def buscar(text):
 	'puesta':puesta,
 	'cielo':cielo,
 	'reemplazar':reemplazar,
-	'cielo':cielo}
+	'cielo':cielo,
+	'city':city}
 
 	return prevision
