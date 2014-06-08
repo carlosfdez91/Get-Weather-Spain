@@ -1,0 +1,217 @@
+alcala de guadaira,SPXX0001
+alcala de henares,SPXX0002
+alcazar de san juan,SPXX0003
+alcira,SPXX0004
+alcobendas,SPXX0005
+alcorcon,SPXX0006
+alcudia,SPXX0007
+alicante,SPXX0008
+almeria,SPXX0009
+aranjuez,SPXX0010
+arizgoiti,SPXX0011
+arrecife,SPXX0012
+badalona,SPXX0013
+baracaldo,SPXX0014
+barcelona,SPXX0015
+bilbao,SPXX0016
+cadiz,SPXX0017
+camas,SPXX0018
+cartagena,SPXX0019
+castelldefels,SPXX0020
+castellon de la plana,SPXX0021
+ceuta,SPXX0022
+ciudad real,SPXX0023
+cordova,SPXX0024
+cuarte de huerva,SPXX0025
+donostia-san sebastian,SPXX0026
+dos hermanas,SPXX0027
+ecija,SPXX0028
+eibar,SPXX0029
+el alquian,SPXX0030
+el astillero,SPXX0031
+el ejido,SPXX0032
+el prat de llobregat,SPXX0033
+el puerto de santa maria,SPXX0034
+elche,SPXX0035
+fuenlabrada,SPXX0036
+gandia,SPXX0037
+gerona,SPXX0038
+getafe,SPXX0039
+granada,SPXX0040
+guadalajara,SPXX0041
+guadix,SPXX0042
+huesca,SPXX0043
+ibiza,SPXX0044
+jaen,SPXX0045
+jerez de la frontera,SPXX0046
+las palmas,SPXX0047
+leganes,SPXX0048
+l'hospitalet de llobregat,SPXX0049
+madrid,SPXX0050
+mahon,SPXX0051
+malaga,SPXX0052
+manacor,SPXX0053
+marbella,SPXX0054
+mataro,SPXX0055
+moron de la frontera,SPXX0056
+mostoles,SPXX0057
+motril,SPXX0058
+murcia,SPXX0059
+muriedas,SPXX0060
+palma de mallorca,SPXX0061
+paterna,SPXX0062
+pozuelo de alarcon,SPXX0063
+premia de mar,SPXX0064
+puerto del Rosario,SPXX0065
+sabadell,SPXX0066
+san antonio abad,SPXX0067
+sanlucar de barrameda,SPXX0068
+santa coloma de gramanet,SPXX0069
+santa cruz de tenerife,SPXX0070
+santa Pola,SPXX0071
+santander,SPXX0072
+sestao,SPXX0073
+sevilla,SPXX0074
+talavera de la reina,SPXX0075
+tarragona,SPXX0076
+toledo,SPXX0077
+torrelavega,SPXX0078
+tudela,SPXX0079
+utebo,SPXX0080
+utrera,SPXX0081
+valencia,SPXX0082
+vicar,SPXX0083
+vigo,SPXX0084
+vilanova i la geltru,SPXX0085
+zaragoza,SPXX0086
+agreda,SPXX0087
+algeciras,SPXX0088
+antequera,SPXX0089
+aracena,SPXX0090
+armilla,SPXX0091
+ayamonte,SPXX0092
+benasque,SPXX0093
+buitrago,SPXX0094
+calatayud,SPXX0095
+cazorla,SPXX0098
+cuenca,SPXX0100
+durango,SPXX0101
+elizondo,SPXX0102
+huescar,SPXX0104
+jerez,SPXX0105
+laguardia,SPXX0106
+lorca,SPXX0109
+lugo,SPXX0110
+merida,SPXX0111
+montalban,SPXX0112
+navacerrada,SPXX0113
+pamplona,SPXX0114
+pontevedra,SPXX0115
+priego,SPXX0116
+requena,SPXX0117
+reus,SPXX0118
+riano,SPXX0119
+riaza,SPXX0120
+ronda,SPXX0121
+sahagun,SPXX0122
+tordesillas,SPXX0126
+alcoi,SPXX0133
+arenas de pan pedro,SPXX0135
+blanes,SPXX0137
+calahorra,SPXX0138
+cazalla de la sierra,SPXX0139
+ciudad rodrigo,SPXX0140
+figueras,SPXX0141
+fuerteventura,SPXX0142
+girona,SPXX0143
+gomera,SPXX0144
+hellin,SPXX0145
+hinojosa del duque,SPXX0146
+lalin,SPXX0147
+miranda de ebro,SPXX0152
+molina de aragon,SPXX0153
+morforte de lemos,SPXX0154
+pollensa,SPXX0157
+puerto de la cruz,SPXX0158
+benidorm,SPXX0165
+covadonga,SPXX0166
+gran canaria sur,SPXX0171
+isla de alboran,SPXX0172
+langreo,SPXX0173
+lleida,SPXX0175
+manzaneda,SPXX0176
+pajares,SPXX0177
+potocolom,SPXX0178
+reinosa,SPXX0180
+renteria,SPXX0181
+salas de los infantes,SPXX0182
+salou,SPXX0183
+urbion-ventrosa,SPXX0187
+xativa,SPXX0188
+la coruña,SPXX0189
+oviedo,SPXX0190
+san sebastian,SPXX0191
+leon,SPXX0192
+burgos,SPXX0193
+logroño,SPXX0194
+valladolid,SPXX0195
+salamanca,SPXX0196
+albacete/los llanos,SPXX0197
+talavera la real,SPXX0198
+granada/aeropuerto,SPXX0200
+gando,SPXX0201
+aviles,SPXX0202
+badajoz,SPXX0203
+caceres,SPXX0204
+calamocha,SPXX0205
+hierro island,SPXX0206
+la palma islan,SPXX0207
+santiago de compostela,SPXX0208
+tortosa,SPXX0209
+tenerife / sur reina,SPXX0210
+viso del marques,SPXX0211
+cordoba,SPXX0220
+gijon,SPXX0222
+orense,SPXX0223
+vitoria,SPXX0224
+huelva,SPXX0225
+melilla,SPXX0226
+segovia,SPXX0227
+palencia,SPXX0228
+zamora,SPXX0229
+teruel,SPXX0230
+avila,SPXX0231
+sierra nevada,SPXX0233
+montmelo,SPXX0234
+galdar,SPXX0235
+boi taull,SPXX0236
+tarifa,SPXX0237
+gran canaria,SPXX0238
+lanzarote,SPXX0239
+toro,SPXX0240
+infantes,SPXX0241
+manresa,SPXX0242
+soria,SPXX0243
+trujillo,SPXX0244
+plasencia,SPXX0245
+lora del rio,SPXX0246
+estepa,SPXX0247
+villanueva de cordoba,SPXX0248
+lucena,SPXX0249
+andujar,SPXX0250
+bailen,SPXX0251
+jodar,SPXX0252
+agudo,SPXX0253
+consuegra,SPXX0254
+tarancon,SPXX0255
+las pedroneras,SPXX0256
+motilla del palancar,SPXX0257
+denia,SPXX0258
+villena,SPXX0259
+pinoso,SPXX0260
+almansa,SPXX0261
+olot,SPXX0262
+villanueva de la serena,SPXX0263
+puertollano,SPXX0264
+cieza,SPXX0265
+baza,SPXX0266
