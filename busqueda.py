@@ -9,7 +9,8 @@ def buscar(text):
 	nombre = text.lower()
 	nombresin = nombre.replace("á","a").replace("é","e").replace("í","i").replace("ó","o").replace("ú","u").replace("ñ","n");
 
-	codigos = open('codigos.txt','r')
+	#codigos = open('codigos.txt','r')
+	codigos = open(os.path.join(os.path.dirname(__file__),"codigos.txt"),'r')
 	
 	encontrado = False
 	

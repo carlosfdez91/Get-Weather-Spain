@@ -1,30 +1,82 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1 -strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 	<link rel="shortcut icon" href="static/images/favicon.ico">
+	<link rel="stylesheet" href="static/css/estilo.css" type="text/css" media="screen" />
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<div id="desaparecer">
+			<p>
+				{% for elemento in datos %}
+			</p>
+		</div>
 		<title>{{ datos['city'] }} - Get Weather!</title >
 	</head>
-		<body>
-			<div id="centrar">
+	<body>
+		<div id="container">
+		<div id="header">
 			<h1>
     			<a class="navbar-brand" href="/" title="Get Weather!">
     			<img src="static/images/icono.png" alt="Get Weather!" /> 
      			</a>
   			</h1>
-			<h1>Previsión Metereológica de {{ datos['tiempode'] }}</h1>
-				{% for elemento in datos %}
-			<h2>-Valores detallados:</h2>
+		</div>
+		<div id="navigation">
 			<ul>
-				<li>Fecha y hora de la actualización de datos: {{ datos['fechayhora'] }}</li>
-				<li>Temperatura actual: {{ datos['tempactual'] }} º {{ datos['grados'] }}, Condición actual: {{ datos['reemplazar'] }}</li>
-				<img src="static/images/{{ datos['cielo'] }}.png" width=285 height=200>
-				<li>Viento: Sensación térmica {{ datos['sensacion'] }} º {{ datos['grados'] }}, Dirección {{ datos['direccion'] }}, Velocidad {{ datos['velocidad'] }} {{ datos['speed'] }}</li>
-				<li>Atmósfera: Humedad {{ datos['humedad'] }} por ciento, Visibilidad {{ datos['vision'] }}, {{ datos['km'] }}, Presión {{ datos['presion'] }} {{ datos['press'] }}</li>
-				<li>Astronomía: {{ datos['sol'] }}, Amanecer: Ocaso: {{ datos['puesta'] }}</li>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact us</a></li>
 			</ul>
+		</div>
+		<div id="content-container1">
+		<div id="content-container2">
+		<div id="section-navigation">
+			<ul></ul>
+		</div>
+		<div id="row1col1">
+			<table>
+				<tbody>
+				<tr>
+					<td><h1>Meteorologia actual en {{ datos['city'] }}</h1></td>
+				</tr>
+				<tr>
+					<td><h2><img src="static/images/{{ datos['cielo'] }}.png" title="{{ datos['reemplazar'] }}" width=285 height=200></td></h2>
+				<div id="grados">
+					<td><h3>{{ datos['tempactual'] }} ° {{ datos['grados'] }}</h3></td>
+				</div>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="content">
+			<h2>Valores detallados:</h2>
+			<div class="datagrid">
+			<table class="table table-striped table-bordered table-condensed">
+			<tbody>
+				<tr><td>Nubosidad</td><td>{{ datos['reemplazar'] }}</td></tr>
+				<tr class="alt"><td>Sensación térmica</td><td>{{ datos['sensacion'] }} ° {{ datos['grados'] }}</td></tr>
+				<tr><td>Viento</td><td>{{ datos['direccion'] }} °<br>{{ datos['velocidad'] }} {{ datos['speed'] }}</td></tr>
+				<tr class="alt"><td>Humedad</td><td>{{ datos['humedad'] }} %</td></tr>
+				<tr><td>Visibilidad</td><td>{{ datos['vision'] }} {{ datos['km'] }}</td></tr>
+				<tr class="alt"><td>Presión</td><td>{{ datos['presion'] }} {{ datos['press'] }}</td></tr>
+				<tr><td>Amanecer</td><td>{{ datos['sol'] }}</td></tr>
+				<tr class="alt"><td>Ocaso</td><td>{{ datos['puesta'] }}</td></tr>
+				<tr><td>data</td><td>data</td></tr>
+			</tbody>
+			</table></div>
 			<a href="/"><img src="static/images/back.png" alt="Volver a la página de busqueda" width=93 height=93></a>
+				</div>
+		<div id="aside">
+		</div>
+		<div id="footer">
+			Copyright 2014 © Get Weather!
+		</div>
+		</div>
+		</div>
+		</div>
+	</body>
+	<div id="desaparecer2">
+			<p>
 				{% endfor %}
-			
-  		</body>
+			</p>
+	</div>
 </html>

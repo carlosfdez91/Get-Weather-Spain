@@ -1,5 +1,6 @@
 from bottle import route, get, post, run, template, request, static_file, default_app
 from busqueda import buscar
+import os
 
 # @route('/')
 # def index():
@@ -13,11 +14,23 @@ def entrada():
 def server_static(filename):
     return static_file(filename, root='./static/images/')
 
+@route('/static/css/<filename>')
+def server_static(filename):
+    return static_file(filename, root='./static/css/')
+
 @post('/resultado')
 def busqueda():
     text = request.forms.get('text')
-    prevision = buscar(text)
-    return template("resultado.html",datos=prevision)
+    if text == "":
+        return template ("campo_vacio.html")
+    else:
+        prevision = buscar(text)
+        return template("resultado.html",datos=prevision)
+
+# @post('/resultado')
+# def vacio():
+#     nulo = buscar(text)
+#     return template("campo_vacio.html")    
 
 import os
 from bottle import TEMPLATE_PATH
