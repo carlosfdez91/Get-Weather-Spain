@@ -53,6 +53,7 @@
 			<table class="table table-striped table-bordered table-condensed">
 			<tbody>
 				<tr><td>Nubosidad</td><td>{{ datos['reemplazar'] }}</td></tr>
+				<tr><td>Máxima prevista: {{ datos['alta'] }} ° C</td><td>Mínima prevista: {{ datos['baja'] }} ° C</td></tr>
 				<tr class="alt"><td>Sensación térmica</td><td>{{ datos['sensacion'] }} ° {{ datos['grados'] }}</td></tr>
 				<tr><td>Viento</td><td>{{ datos['direccion'] }} °<br>{{ datos['velocidad'] }} {{ datos['speed'] }}</td></tr>
 				<tr class="alt"><td>Humedad</td><td>{{ datos['humedad'] }} %</td></tr>
@@ -60,10 +61,10 @@
 				<tr class="alt"><td>Presión</td><td>{{ datos['presion'] }} {{ datos['press'] }}</td></tr>
 				<tr><td>Amanecer</td><td>{{ datos['sol'] }}</td></tr>
 				<tr class="alt"><td>Ocaso</td><td>{{ datos['puesta'] }}</td></tr>
-				<tr><td>data</td><td>data</td></tr>
-			</tbody>
+				<tr><td>Actualización de datos</td><td>{{ datos['fechayhora'] }}</td></tr>
+				</tbody>
 			</table></div>
-			<a href="/"><img src="static/images/back.png" alt="Volver a la página de busqueda" width=93 height=93></a>
+			<a href="/"><img src="static/images/back.png" title="Volver a la página de busqueda" width=93 height=93></a>
 				</div>
 		<div id="aside">
 		</div>

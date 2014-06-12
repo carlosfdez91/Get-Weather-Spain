@@ -9,7 +9,6 @@ def buscar(text):
 	nombre = text.lower()
 	nombresin = nombre.replace("á","a").replace("é","e").replace("í","i").replace("ó","o").replace("ú","u").replace("ñ","n");
 
-	#codigos = open('codigos.txt','r')
 	codigos = open(os.path.join(os.path.dirname(__file__),"codigos.txt"),'r')
 	
 	encontrado = False
@@ -50,6 +49,8 @@ def buscar(text):
 	presion = raiz2.find('channel/%satmosphere' % yweatherns).attrib["pressure"]
 	sol = raiz2.find('channel/%sastronomy' % yweatherns).attrib["sunrise"]
 	puesta = raiz2.find('channel/%sastronomy' % yweatherns).attrib["sunset"]
+	baja = raiz2.find('channel/item/%sforecast' % yweatherns).attrib["low"]
+	alta = raiz2.find('channel/item/%sforecast' % yweatherns).attrib["high"]
 	cielo = raiz2.find('channel/item/%scondition' % yweatherns).attrib["code"]
 	reemplazar = cielo.replace("10"
 		,"Lluvia congelada").replace("11"
@@ -94,9 +95,6 @@ def buscar(text):
 
 	
 	prevision = {
-	'ciudad':ciudad,
-	'tiempo.text':tiempo.url,
-	'ciudad':ciudad,
 	'tiempode':tiempode,
 	'fechayhora':fechayhora,
 	'tempactual':tempactual,
@@ -115,6 +113,8 @@ def buscar(text):
 	'cielo':cielo,
 	'reemplazar':reemplazar,
 	'cielo':cielo,
-	'city':city}
+	'city':city,
+	'alta':alta,
+	'baja':baja}
 
 	return prevision

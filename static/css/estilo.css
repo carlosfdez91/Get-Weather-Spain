@@ -7,7 +7,8 @@ body
 	padding: 0;
 	font: 100%/1.3 helvetica, arial, sans-serif;
 	color: #444;
-	background: #fff;
+	background: #7bc8f9;
+	border: 2px;
 }
 
 #centrar
@@ -72,6 +73,7 @@ body
 
 #navigation li a
 {
+	font: 100%/1.3 helvetica, arial, sans-serif;
 	display: block;
 	float: left;
 	padding: 5px 10px;
@@ -80,7 +82,7 @@ body
 	border-right: 1px solid #fff;
 }
 
-#navigation li a:hover { background: #383; }
+#navigation li a:hover { background: #189ff4; }
 
 #content-container1
 {
@@ -190,7 +192,7 @@ body
 #centrar input[type=text]
 {
 	background: rgba(227, 231, 228, 1);
-	font-family: 'Open Sans', arial, sans-serif;
+	font-family: 100%/1.3 helvetica, arial, sans-serif;
 	font-size: 1.3125em;
 	border: 0;
 	text-align: left;
@@ -201,7 +203,7 @@ body
 #centrar input[type=text]:focus
 {
 	background: #333;
-	color: #333;
+	color: #189ff4;
 	transition: background 0.25 ease-in;
 	-moz-transition: background 0.25 ease-in;
 	-webkit-transition: background 0.25 ease-in;
@@ -210,12 +212,12 @@ body
 #centrar input[type=text] 
 {
 	height: 1.9em;
-	width:35%;
+	width:50%;
 }
 
 #centrar input[type=submit] 
 {
-	font-family: 'Patua One', arial, sans-serif;
+	font-family: 100%/1.3 helvetica, arial, sans-serif;
 	color: #333;
 	width: 125px;
 	height: 2.2em;
